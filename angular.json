@@ -118,5 +118,8 @@
       }
     }
   },
-  "defaultProject": "ngrx-entity-demo"
+  "defaultProject": "ngrx-entity-demo",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
