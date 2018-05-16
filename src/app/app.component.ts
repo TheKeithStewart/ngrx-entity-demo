@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import * as fromUser from './reducers/user/user.reducer';
-import * as userActions from './actions/user.actions';
+import * as fromUser from './state/user.reducer';
+import * as userActions from './state/user.actions';
 import { User } from './models';
 
 @Component({

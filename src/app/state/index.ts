@@ -6,7 +6,7 @@ import {
   MetaReducer
 } from '@ngrx/store';
 import { environment } from '../../environments/environment';
-import * as fromUser from './user/user.reducer';
+import * as fromUser from './user.reducer';
 
 export interface State {
   user: fromUser.State;

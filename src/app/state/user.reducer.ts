@@ -1,6 +1,6 @@
 import { Action, createFeatureSelector, createSelector } from '@ngrx/store';
-import { UserActions, UserActionTypes } from './../../actions/user.actions';
-import { User } from '../../models';
+import { UserActions, UserActionTypes } from './user.actions';
+import { User } from '../models';
 
 export interface State {
   users: User[];
