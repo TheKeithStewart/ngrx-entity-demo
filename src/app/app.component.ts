@@ -21,6 +21,6 @@ export class AppComponent {
     this.store.dispatch(new userActions.LoadUsers());
 
     this.users$ = this.store.select(fromUser.selectAllUsers);
-    this.selectedUser$ = this.store.select(fromUser.selectUserById(49000));
+    this.selectedUser$ = this.store.select(fromUser.selectUserById(500));
   }
 }
