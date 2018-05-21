@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { reducers, metaReducers } from './state';
 import { environment } from './../environments/environment';
 import { UserEffects } from './state/user.effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule, MatButtonModule } from '@angular/material';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,11 @@ import { UserEffects } from './state/user.effects';
     HttpClientModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([UserEffects])
+    EffectsModule.forRoot([UserEffects]),
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatTableModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
