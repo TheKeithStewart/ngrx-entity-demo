@@ -37,11 +37,17 @@ export function reducer(state = initialState, action: UserActions): State {
     }
 
     case UserActionTypes.AddUserSuccess: {
-      const users = [ ...state.users ];
-      users.push(action.payload.user);
+      const ids: number[] = [ ...state.users.ids ];
+      ids.push(action.payload.user.id);
       return {
         ...state,
-        users
+        users: {
+          ...state.users,
+          entities: {
+            [action.payload.user.id]: action.payload.user
+          },
+          ids
+        }
       };
     }
 
