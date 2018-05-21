@@ -20,7 +20,7 @@ export function reducer(state = initialState, action: UserActions): State {
     }
 
     case UserActionTypes.AddUserSuccess: {
-      const users = Object.assign([], state.users);
+      const users = [ ...state.users ];
       users.push(action.payload.user);
       return {
         ...state,
